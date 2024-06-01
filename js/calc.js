@@ -17,8 +17,8 @@ function calcular() {
         if (fcr != '') {
             fct = fcm - fcr;
             document.getElementById('FCT').value = fct;
-            document.getElementById('lbl_FCT').className = "fct_visible text-sm font-medium text-white";
-            document.getElementById('FCT').className = "fct_visible text-center min-w-4 max-w-14 rounded-md border-1 bg-white px-1.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6";
+            document.getElementById('lbl_FCT').className = "visible text-sm font-medium text-white";
+            document.getElementById('FCT').className = "visible text-center min-w-4 max-w-14 rounded-md border-1 bg-white px-1.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6";
             document.getElementById('divfct').className = "items-center text-center px-2 py-2 mx-2 border-2 rounded-md bg-slate-800";
 
             document.getElementById('perc50').value = 50;
@@ -69,8 +69,8 @@ function borrar() {
     document.getElementById('FCM').value = "";
     document.getElementById('FCR').value = "";
     document.getElementById('FCT').value = "";
-    document.getElementById('lbl_FCT').className = "fct_hidden";
-    document.getElementById('FCT').className = "fct_hidden";
+    document.getElementById('lbl_FCT').className = "hidden";
+    document.getElementById('FCT').className = "hidden";
     document.getElementById('divfct').className = "hidden block px-2 py-2 mx-2 border-2 rounded-md bg-slate-800";
     document.getElementById('percFC').className = "hidden";
     document.getElementById('pulsaciones').className = "hidden";
