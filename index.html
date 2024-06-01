@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calcular zonas FC</title>
+    <script src="./js/calc.js"></script>
+    <link href="./css/output.css" rel="stylesheet">
+</head>
+<body onload="borrar()" >
+    <div class="mx-3 my-3">
+        <div class="bg-gray-800 mx-auto max-w-2xl lg:max-w-5xl rounded-t-md flex items-center">
+            <img src="https://img.icons8.com/fluency/48/like.png" class="my-auto pl-4 pr-2 py-4 min-w-12 min-h-12"/>
+            <h1 class="my-auto text-3xl font-bold tracking-tight text-white" >Calcular Zonas FC</h1>
+        </div>
+        <div class="mx-auto max-w-2xl lg:max-w-5xl bg-slate-700 rounded-b-md shadow" >
+            <div class="bg-slate-600">
+                <label class="block text-sm leading-6 text-white bg-indigo-600 px-4 py-4 shadow">Introduce tu <b>Frecuendia Cardíaca Máxima (FCM)</b> y tu <b>Frecuendia Cardíaca en Reposo (FCR)</b>. La diferencia es tu <b>Frecuendia Cardíaca de Trabajo (FCT)</b> utilizada para calcular tus Zonas de Frecuencia Cardíaca.</label>
+            </div>
+            <div class="fcmfcr flex justify-center items-center">
+                <div class="block px-2 py-2 mx-2 border-2 rounded-md bg-slate-800">
+                    <label class="text-sm font-medium text-white px-2">FCM</label>
+                    <input type="text" id="FCM" name="FCM" required minlength="2" maxlength="3" class="text-center min-w-4 max-w-14 flex-auto rounded-md border-1 bg-white px-1.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6"/>
+                </div>
+                <div class="block px-2 py-2 mx-2 border-2 rounded-md bg-slate-800">
+                    <label class="text-sm font-medium text-white px-2">FCR</label>
+                    <input type="text" id="FCR" name="FCR" required minlength="2" maxlength="3" class="text-center min-w-4 max-w-14 flex-auto rounded-md border-1 bg-white px-1.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6"/>
+                </div>
+                <div id="divfct" class="hidden block px-2 py-2 mx-2 border-2 rounded-md bg-slate-800">
+                    <label id = "lbl_FCT" class="fct_hidden text-sm font-medium text-white px-2">FCT</label>
+                    <input type="text" id="FCT" name="FCR" required minlength="2" maxlength="3" readonly="true" class="fct_hidden text-center min-w-4 max-w-14 flex-auto rounded-md border-1 bg-white px-1.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6"/>
+                </div>
+            </div>
+            <div class="buttons flex justify-center items-center mt-6">
+                <input type="submit" value="Calcular" onclick="calcular()" class="w-28 mx-3 pl-8 pr-8 flex-none rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500""/>
+                <input type="submit" value="Borrar" onclick="borrar()" class="w-28 mx-3 pl-8 pr-8 flex-none rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"/>
+            </div>
+            <div class="flex justify-center">
+                <div>
+                    <div class="cabecera mt-4">
+                        <label id="percFC" class="hidden text-sm font-medium">% FC </label>
+                        <label id="pulsaciones" class="hidden text-sm font-medium">Pulsaciones </label>
+                    </div>
+                    <div class="zones">
+                        <input type="text" id="perc50" readonly="true" size="2" class="hidden"/>
+                        <input type="text" id="zone0" readonly="true" size="2" class="hidden"/>
+                    </div>
+                    <div class="zones">
+                        <input type="text" id="perc60" readonly="true" class="hidden" size="2"/>
+                        <input type="text" id="zone1" readonly="true" class="hidden" size="2"/>
+                    </div>
+                    <div class="zones">
+                        <label id="70" class="hidden">% FC </label>
+                        <input type="text" id="perc70" readonly="true" class="hidden" size="2"/>
+                        <label id="p70" class="hidden">Pulsaciones </label>
+                        <input type="text" id="zone2" readonly="true" class="hidden" size="2"/>
+                    </div>
+                    <div class="zones">
+                        <label id="80" class="hidden">% FC </label>
+                        <input type="text" id="perc80" readonly="true" class="hidden" size="2"/>
+                        <label id="p80" class="hidden">Pulsaciones </label>
+                        <input type="text" id="zone3" readonly="true" class="hidden" size="2"/>
+                    </div>
+                    <div class="zones">
+                        <label id="90" class="hidden">% FC</label>
+                        <input type="text" id="perc90" readonly="true" class="hidden" size="2"/>
+                        <label id="p90" class="hidden">Pulsaciones</label>
+                        <input type="text" id="zone4" readonly="true" class="hidden" size="2"/>
+                    </div>
+                    <div class="zones mb-6">
+                        <label id="100" class="hidden">% FC </label>
+                        <input type="text" id="perc100" readonly="true" class="hidden" size="2"/>
+                        <label id="p100" class="hidden">Pulsaciones </label>
+                        <input type="text" id="zone5" readonly="true" class="hidden" size="2"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

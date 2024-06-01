@@ -1,0 +1,43 @@
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color:rgb(32, 30, 41);
+}
+.fct_hidden {
+    display: none;
+}
+.fct_visible {
+    display:inline;
+}
+.fcmfcr  {
+
+    margin-top: 30px;
+    padding: 5px;
+/* label {
+    margin: 5px;*/
+} 
+.buttons {
+    padding: 5px;
+}
+.hidden {
+    display: none;
+}
+.visible {
+    display:inline;
+}
+.zones{
+    display: block;
+    margin: 10px 0 10px 0;
+}
+.cabecera {
+    margin-bottom: 5px;
+}
+#zone0,#zone1,#zone2,#zone3,#zone4,#zone5 {
+    margin-left: 13px;
+}
+#perc50,#perc60,#perc70,#perc80,#perc90,#perc100 {
+    margin-left: 5px;
+}
