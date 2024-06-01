@@ -25,12 +25,12 @@ body {
 .hidden {
     display: none;
 }
-.visible {
+/* .visible {
     display:inline;
-}
+} */
 .zones{
     display: block;
-    margin: 10px 0 10px 0;
+    margin-top: 10px;
 }
 .cabecera {
     margin-bottom: 5px;
@@ -39,5 +39,5 @@ body {
     margin-left: 13px;
 }
 #perc50,#perc60,#perc70,#perc80,#perc90,#perc100 {
-    margin-left: 5px;
+    /* margin-left: 5px; */
 }
