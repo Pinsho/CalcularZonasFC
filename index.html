@@ -38,48 +38,83 @@
                     <input type="text" id="FCT" name="FCR" required minlength="2" maxlength="3" readonly="true" class="hidden text-center min-w-4 max-w-14 rounded-md border-1 bg-white px-1.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6"/>
                 </div>
             </div>
-            <div class="buttons flex justify-center items-center mt-6">
+            <div class="buttons flex justify-center items-center">
                 <input type="submit" value="Calcular" onclick="calcular()" class="w-28 mx-3 pl-8 pr-8 flex-none rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500""/>
                 <input type="submit" value="Borrar" onclick="borrar()" class="w-28 mx-3 pl-8 pr-8 flex-none rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"/>
             </div>
-            <div class="flex justify-center">
-                <div>
-                    <div class="cabecera mt-4">
-                        <label id="percFC" class="hidden text-sm font-medium">% FC </label>
-                        <label id="pulsaciones" class="hidden text-sm font-medium">Pulsaciones </label>
+            <div id="container" class="hidden items-center justify-center">
+                <div class="wrapper">
+                    <div>
+                        <div class="cabecera">
+                            <label id="percFC" class="hidden text-sm font-medium">% FC </label>
+                            <label id="pulsaciones" class="hidden text-sm font-medium">Pulsaciones </label>
+                        </div>
+                        <div class="zones">
+                            <input type="text" id="perc50" readonly="true" size="2" class="hidden"/>
+                            <input type="text" id="zone0" readonly="true" size="2" class="hidden"/>
+                        </div>
+                        <div class="zones">
+                            <input type="text" id="perc60" readonly="true" class="hidden" size="2"/>
+                            <input type="text" id="zone1" readonly="true" class="hidden" size="2"/>
+                        </div>
+                        <div class="zones">
+                            <label id="70" class="hidden">% FC </label>
+                            <input type="text" id="perc70" readonly="true" class="hidden" size="2"/>
+                            <label id="p70" class="hidden">Pulsaciones </label>
+                            <input type="text" id="zone2" readonly="true" class="hidden" size="2"/>
+                        </div>
+                        <div class="zones">
+                            <label id="80" class="hidden">% FC </label>
+                            <input type="text" id="perc80" readonly="true" class="hidden" size="2"/>
+                            <label id="p80" class="hidden">Pulsaciones </label>
+                            <input type="text" id="zone3" readonly="true" class="hidden" size="2"/>
+                        </div>
+                        <div class="zones">
+                            <label id="90" class="hidden">% FC</label>
+                            <input type="text" id="perc90" readonly="true" class="hidden" size="2"/>
+                            <label id="p90" class="hidden">Pulsaciones</label>
+                            <input type="text" id="zone4" readonly="true" class="hidden" size="2"/>
+                        </div>
+                        <div class="zones mb-6">
+                            <label id="100" class="hidden">% FC </label>
+                            <input type="text" id="perc100" readonly="true" class="hidden" size="2"/>
+                            <label id="p100" class="hidden">Pulsaciones </label>
+                            <input type="text" id="zone5" readonly="true" class="hidden" size="2"/>
+                        </div>
                     </div>
-                    <div class="zones">
-                        <input type="text" id="perc50" readonly="true" size="2" class="hidden"/>
-                        <input type="text" id="zone0" readonly="true" size="2" class="hidden"/>
+                    <div>
+                        <div id="wrapper_diagram" class="wrapper-diagram hidden">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div id="bracket"><img src="/img/bracket.png"></div>
+                            <div class="br-zone font-medium" id="br_zone1">Zona 1</div>  
+                            <div></div>
+                            <div></div>
+                            <div id="bracket"><img src="/img/bracket.png"></div>
+                            <div class="br-zone font-medium" id="br_zone2">Zona 2</div>
+                            <div></div>
+                            <div></div>
+                            <div id="bracket"><img src="/img/bracket.png"></div>
+                            <div class="br-zone font-medium" id="br_zone">Zona 3</div>
+                            <div></div>
+                            <div></div>
+                            <div id="bracket"><img src="/img/bracket.png"></div>
+                            <div class="br-zone font-medium" id="br_zone">Zona 4</div>
+                            <div></div>
+                            <div></div>
+                            <div id="bracket"><img src="/img/bracket.png"></div>
+                            <div class="br-zone font-medium" id="br_zone">Zona 5</div>
+                            <div></div>
+                            <div></div>
+                        </div>
                     </div>
-                    <div class="zones">
-                        <input type="text" id="perc60" readonly="true" class="hidden" size="2"/>
-                        <input type="text" id="zone1" readonly="true" class="hidden" size="2"/>
-                    </div>
-                    <div class="zones">
-                        <label id="70" class="hidden">% FC </label>
-                        <input type="text" id="perc70" readonly="true" class="hidden" size="2"/>
-                        <label id="p70" class="hidden">Pulsaciones </label>
-                        <input type="text" id="zone2" readonly="true" class="hidden" size="2"/>
-                    </div>
-                    <div class="zones">
-                        <label id="80" class="hidden">% FC </label>
-                        <input type="text" id="perc80" readonly="true" class="hidden" size="2"/>
-                        <label id="p80" class="hidden">Pulsaciones </label>
-                        <input type="text" id="zone3" readonly="true" class="hidden" size="2"/>
-                    </div>
-                    <div class="zones">
-                        <label id="90" class="hidden">% FC</label>
-                        <input type="text" id="perc90" readonly="true" class="hidden" size="2"/>
-                        <label id="p90" class="hidden">Pulsaciones</label>
-                        <input type="text" id="zone4" readonly="true" class="hidden" size="2"/>
-                    </div>
-                    <div class="zones mb-6">
-                        <label id="100" class="hidden">% FC </label>
-                        <input type="text" id="perc100" readonly="true" class="hidden" size="2"/>
-                        <label id="p100" class="hidden">Pulsaciones </label>
-                        <input type="text" id="zone5" readonly="true" class="hidden" size="2"/>
-                    </div>
+                    
                 </div>
             </div>
         </div>

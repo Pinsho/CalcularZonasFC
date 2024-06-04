@@ -20,7 +20,7 @@ body {
     margin: 5px;*/
 } 
 .buttons {
-    padding: 5px;
+    padding: 25px;
 }
 .hidden {
     display: none;
@@ -40,4 +40,26 @@ body {
 }
 #perc50,#perc60,#perc70,#perc80,#perc90,#perc100 {
     /* margin-left: 5px; */
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(160px, auto);
+  }
+.wrapper-diagram{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4.9px;
+    grid-auto-rows: minmax(10px, auto);
+    width: 120px;
+}
+.br-zone {
+    margin-top: 4px;
+    color: white;
+    width: auto;
+  }
+#bracket {
+    width: 35px;
+    margin-top: 0.7px;
 }

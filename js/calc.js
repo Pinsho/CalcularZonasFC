@@ -45,6 +45,8 @@ function calcular() {
             zone5 = Math.round(Number(fct) * (100/100) + Number(fcr));
             document.getElementById('zone5').value = zone5;
             
+            document.getElementById('container').className = "visible flex items-center justify-center";
+            document.getElementById('wrapper_diagram').className = "visible wrapper-diagram";
             document.getElementById('percFC').className = "visible text-center text-sm font-medium ml-4 text-white";
             document.getElementById('pulsaciones').className = "visible text-center text-sm font-medium ml-4 text-white";
             document.getElementById('perc50').className = "visible text-center min-w-0 flex-auto rounded-md border-1 bg-white px-3.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6";
@@ -59,6 +61,9 @@ function calcular() {
             document.getElementById('zone3').className = "visible text-center min-w-0 flex-auto rounded-md border-1 bg-white px-3.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6";
             document.getElementById('zone4').className = "visible text-center min-w-0 flex-auto rounded-md border-1 bg-white px-3.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6";
             document.getElementById('zone5').className = "visible text-center min-w-0 flex-auto rounded-md border-1 bg-white px-3.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6";
+            
+            
+
         } else {window.alert("FCR no puede estar vacío");}
     } else {
         window.alert("FCM no puede estar vacío");
@@ -66,6 +71,7 @@ function calcular() {
 }
 
 function borrar() {
+    document.getElementById('wrapper_diagram').className = "hidden wrapper-diagram";
     document.getElementById('FCM').value = "";
     document.getElementById('FCR').value = "";
     document.getElementById('FCT').value = "";
