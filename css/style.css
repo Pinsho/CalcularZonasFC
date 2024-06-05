@@ -44,20 +44,23 @@ body {
 .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
+    grid-gap: 5px;
     grid-auto-rows: minmax(160px, auto);
+    width: auto;
+    text-align: right;
   }
 .wrapper-diagram{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 4.9px;
     grid-auto-rows: minmax(10px, auto);
-    width: 120px;
+    width: auto;
 }
 .br-zone {
     margin-top: 4px;
     color: white;
     width: auto;
+    text-align: right;
   }
 #bracket {
     width: 35px;
