@@ -13,21 +13,16 @@ body {
     display:inline;
 }
 .fcmfcr  {
-
     margin-top: 30px;
     padding: 5px;
-/* label {
-    margin: 5px;*/
+
 } 
 .buttons {
-    padding: 25px;
+    padding: 20px 0 8px 0;
 }
 .hidden {
     display: none;
 }
-/* .visible {
-    display:inline;
-} */
 .zones{
     display: block;
     margin-top: 10px;
@@ -35,12 +30,7 @@ body {
 .cabecera {
     margin-bottom: 5px;
 }
-#zone0,#zone1,#zone2,#zone3,#zone4,#zone5 {
-    margin-left: 13px;
-}
-#perc50,#perc60,#perc70,#perc80,#perc90,#perc100 {
-    /* margin-left: 5px; */
-}
+
 .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -56,12 +46,55 @@ body {
     width: auto;
 }
 .br-zone {
-    margin-top: 4px;
     color: white;
-    width: auto;
+    width: 52px;
     text-align: right;
+    margin-top: 24px;
+    margin-left: 6px;
+    top: -8px !important;
+    position: relative;
   }
-#bracket {
+
+.brackets {
     width: 35px;
-    margin-top: 0.7px;
+    margin-top: 17px;
+    position: relative;
+    top: -6px;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* gap: 1rem; */
+    max-width: 60px;
+  }
+  
+  @media (max-width: 20px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .col, .col input {
+    margin: auto;
+    text-align: center;
+    padding: 2px;
+  }
+  input {
+    width: 55px;
+    height: 40px;
+    margin-bottom: 8px !important;
+    border-radius: 5px;
+  }
+#perc50 {
+margin-top: 5px !important;
+}
+#perc100 {
+    margin-bottom: 20px !important;
+}
+#zone0 {
+    margin-top: 5px !important;
+}
+#zone5 {
+    margin-bottom: 20px !important;
+}
+

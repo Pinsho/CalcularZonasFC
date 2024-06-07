@@ -45,10 +45,8 @@ function calcular() {
             zone5 = Math.round(Number(fct) * (100/100) + Number(fcr));
             document.getElementById('zone5').value = zone5;
             
-            document.getElementById('container').className = "visible flex items-center justify-center";
-            document.getElementById('wrapper_diagram').className = "visible wrapper-diagram";
-            document.getElementById('percFC').className = "visible text-center text-sm font-medium ml-4 text-white";
-            document.getElementById('pulsaciones').className = "visible text-center text-sm font-medium ml-4 text-white";
+            document.getElementById('percFC').className = "visible text-center text-sm font-medium text-white";
+            document.getElementById('pulsaciones').className = "visible text-center text-sm font-medium text-white";
             document.getElementById('perc50').className = "visible text-center min-w-0 flex-auto rounded-md border-1 bg-white px-3.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6";
             document.getElementById('perc60').className = "visible text-center min-w-0 flex-auto rounded-md border-1 bg-white px-3.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6";
             document.getElementById('perc70').className = "visible text-center min-w-0 flex-auto rounded-md border-1 bg-white px-3.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6";
@@ -61,7 +59,16 @@ function calcular() {
             document.getElementById('zone3').className = "visible text-center min-w-0 flex-auto rounded-md border-1 bg-white px-3.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6";
             document.getElementById('zone4').className = "visible text-center min-w-0 flex-auto rounded-md border-1 bg-white px-3.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6";
             document.getElementById('zone5').className = "visible text-center min-w-0 flex-auto rounded-md border-1 bg-white px-3.5 py-2 text-slate-500 font-medium shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6";
-            
+            document.getElementById('br_zone1').className = "visible br-zone font-medium";
+            document.getElementById('br_zone2').className = "visible br-zone font-medium";
+            document.getElementById('br_zone3').className = "visible br-zone font-medium";
+            document.getElementById('br_zone4').className = "visible br-zone font-medium";
+            document.getElementById('br_zone5').className = "visible br-zone font-medium";
+            document.getElementById('bracket1').className = "visible brackets";
+            document.getElementById('bracket2').className = "visible brackets";
+            document.getElementById('bracket3').className = "visible brackets";
+            document.getElementById('bracket4').className = "visible brackets";
+            document.getElementById('bracket5').className = "visible brackets";
             
 
         } else {window.alert("FCR no puede estar vacío");}
@@ -71,7 +78,6 @@ function calcular() {
 }
 
 function borrar() {
-    document.getElementById('wrapper_diagram').className = "hidden wrapper-diagram";
     document.getElementById('FCM').value = "";
     document.getElementById('FCR').value = "";
     document.getElementById('FCT').value = "";
@@ -104,40 +110,15 @@ function borrar() {
     document.getElementById('zone3').className = "hidden";
     document.getElementById('zone4').className = "hidden";
     document.getElementById('zone5').className = "hidden";
+    document.getElementById('br_zone1').className = "hidden";
+    document.getElementById('br_zone2').className = "hidden";
+    document.getElementById('br_zone3').className = "hidden";
+    document.getElementById('br_zone4').className = "hidden";
+    document.getElementById('br_zone5').className = "hidden";
+    document.getElementById('bracket1').className = "hidden";
+    document.getElementById('bracket2').className = "hidden";
+    document.getElementById('bracket3').className = "hidden";
+    document.getElementById('bracket4').className = "hidden";
+    document.getElementById('bracket5').className = "hidden";
 }
-
-/*
-let nombre = 'Hola Mundo';
-
-let personaje = {
-    nombre: "Pikachu",
-    tipo:"Pokemon",
-    color: "Amarillo"
-};
-
-let animales = ['perro','gato','tortuga']
-
-
-console.log('Tu frecuencia cardíaca de trabajo es ' + fct);
-console.log(personaje);
-console.log(personaje.nombre);
-console.log(personaje['color']);
-console.log(animales);
-console.log(animales[1]);
-animales[3] = 'Ornitorrinco'
-console.log(animales)
-console.log(animales.length)
-
-function saludar() {
-    console.log('saluda!');
-}
-saludar();
-
-function suma(a, b) {
-    return a + b;
-}
-let resultado = suma(2, 3);
-console.log(resultado)
-*/
-
 

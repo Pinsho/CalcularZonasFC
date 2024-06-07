@@ -42,79 +42,38 @@
                 <input type="submit" value="Calcular" onclick="calcular()" class="w-28 mx-3 pl-8 pr-8 flex-none rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500""/>
                 <input type="submit" value="Borrar" onclick="borrar()" class="w-28 mx-3 pl-8 pr-8 flex-none rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"/>
             </div>
-            <div id="container" class="hidden items-center justify-center">
-                <div class="wrapper">
-                    <div class="mx-auto w-auto">
-                        <div class="cabecera">
-                            <label id="percFC" class="hidden text-sm font-medium">% FC </label>
-                            <label id="pulsaciones" class="hidden text-sm font-medium">Pulsaciones </label>
-                        </div>
-                        <div class="zones">
-                            <input type="text" id="perc50" readonly="true" size="2" class="hidden"/>
-                            <input type="text" id="zone0" readonly="true" size="2" class="hidden"/>
-                        </div>
-                        <div class="zones">
-                            <input type="text" id="perc60" readonly="true" class="hidden" size="2"/>
-                            <input type="text" id="zone1" readonly="true" class="hidden" size="2"/>
-                        </div>
-                        <div class="zones">
-                            <label id="70" class="hidden">% FC </label>
-                            <input type="text" id="perc70" readonly="true" class="hidden" size="2"/>
-                            <label id="p70" class="hidden">Pulsaciones </label>
-                            <input type="text" id="zone2" readonly="true" class="hidden" size="2"/>
-                        </div>
-                        <div class="zones">
-                            <label id="80" class="hidden">% FC </label>
-                            <input type="text" id="perc80" readonly="true" class="hidden" size="2"/>
-                            <label id="p80" class="hidden">Pulsaciones </label>
-                            <input type="text" id="zone3" readonly="true" class="hidden" size="2"/>
-                        </div>
-                        <div class="zones">
-                            <label id="90" class="hidden">% FC</label>
-                            <input type="text" id="perc90" readonly="true" class="hidden" size="2"/>
-                            <label id="p90" class="hidden">Pulsaciones</label>
-                            <input type="text" id="zone4" readonly="true" class="hidden" size="2"/>
-                        </div>
-                        <div class="zones mb-6">
-                            <label id="100" class="hidden">% FC </label>
-                            <input type="text" id="perc100" readonly="true" class="hidden" size="2"/>
-                            <label id="p100" class="hidden">Pulsaciones </label>
-                            <input type="text" id="zone5" readonly="true" class="hidden" size="2"/>
-                        </div>
-                    </div>
-                    <div class="w-auto mx-auto">
-                        <div id="wrapper_diagram" class="wrapper-diagram hidden">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div id="bracket"><img src="./img/bracket.png"></div>
-                            <div class="br-zone font-medium" id="br_zone1">Zona 1</div>  
-                            <div></div>
-                            <div></div>
-                            <div id="bracket"><img src="./img/bracket.png"></div>
-                            <div class="br-zone font-medium" id="br_zone2">Zona 2</div>
-                            <div></div>
-                            <div></div>
-                            <div id="bracket"><img src="./img/bracket.png"></div>
-                            <div class="br-zone font-medium" id="br_zone">Zona 3</div>
-                            <div></div>
-                            <div></div>
-                            <div id="bracket"><img src="./img/bracket.png"></div>
-                            <div class="br-zone font-medium" id="br_zone">Zona 4</div>
-                            <div></div>
-                            <div></div>
-                            <div id="bracket"><img src="./img/bracket.png"></div>
-                            <div class="br-zone font-medium" id="br_zone">Zona 5</div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                    
+            <div class="grid mx-auto justify-center">
+                <div class="col text-sm font-medium text-slate-500">
+                    <label id="percFC" class="hidden text-white">%FC</label>
+                    <input id="perc50" class="hidden" value="50">
+                    <input id="perc60" class="hidden" value="60">
+                    <input id="perc70" class="hidden" value="70">
+                    <input id="perc80" class="hidden" value="80">
+                    <input id="perc90" class="hidden" value="90">
+                    <input id="perc100" class="hidden" value="100">
+                </div>
+                <div class="col text-sm font-medium text-slate-500">
+                    <label id="pulsaciones" class="hidden text-white">Pulsaciones</label>
+                    <input id="zone0" class="hidden">
+                    <input id="zone1" class="hidden">
+                    <input id="zone2" class="hidden">
+                    <input id="zone3" class="hidden">
+                    <input id="zone4" class="hidden">
+                    <input id="zone5" class="hidden">
+                </div>
+                <div class="col">
+                    <div id="bracket1" class="hidden brackets"><img src="./img/bracket.png"></div>
+                    <div id="bracket2" class="hidden brackets"><img src="./img/bracket.png"></div>
+                    <div id="bracket3" class="hidden brackets"><img src="./img/bracket.png"></div>
+                    <div id="bracket4" class="hidden brackets"><img src="./img/bracket.png"></div>
+                    <div id="bracket5" class="hidden brackets"><img src="./img/bracket.png"></div>
+                </div>
+                <div class="col">
+                    <div class="hidden br-zone font-medium" id="br_zone1">Zona 1</div>
+                    <div class="hidden br-zone font-medium" id="br_zone2">Zona 2</div>
+                    <div class="hidden br-zone font-medium" id="br_zone3">Zona 3</div>
+                    <div class="hidden br-zone font-medium" id="br_zone4">Zona 4</div>
+                    <div class="hidden br-zone font-medium" id="br_zone5">Zona 5</div>
                 </div>
             </div>
         </div>
